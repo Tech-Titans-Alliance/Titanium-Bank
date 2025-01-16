@@ -17,6 +17,11 @@ Titanium Bank is a fully functional banking system built using Java and JavaFX. 
 - **Frontend:** JavaFX (FXML)
 - **Database:** In-memory storage (for simplicity)
 
+## Deployment 🎥
+Check out the project video for a detailed walkthrough of Titanium Bank in action.
+
+Replace the above link with the actual deployment video link once uploaded.
+
 ## Getting Started 🚀
 
 ### Prerequisites
