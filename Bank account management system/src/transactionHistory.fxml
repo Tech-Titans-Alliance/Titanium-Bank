@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Pos?>
+
+<VBox spacing="20" alignment="CENTER" xmlns:fx="http://javafx.com/fxml" fx:controller="TransactionHistoryController" stylesheets="@styles.css" styleClass="vbox">
+    <!-- Transaction History Title with color and emoji -->
+    <Text text="Transaction History 📊" style="-fx-font-size: 24px; -fx-fill: rgb(155, 6, 105);" />
+    
+    <!-- Bank Name and Transaction Details -->
+   <HBox spacing="10" alignment="TOP_LEFT">
+    <Text style="-fx-font-weight: bold; -fx-font-size: 24px;" text="Titanium Bank" />
+    </HBox>
+    
+    <!-- Date and Time section -->
+    <HBox spacing="10" alignment="TOP_LEFT">
+        <Text style="-fx-font-weight: bold;" text="Date: "/>
+        <Text fx:id="dateText" />
+    </HBox>
+    <HBox spacing="10" alignment="TOP_LEFT">
+        <Text style="-fx-font-weight: bold;" text="Time: "/>
+        <Text fx:id="timeText" />
+    </HBox>
+    
+    <!-- Transaction History -->
+    <VBox fx:id="transactionVBox" spacing="10" alignment="TOP_LEFT" />
+    
+    <!-- Back to Dashboard Button with black and bold text -->
+    <Button fx:id="backButton" text="Back to Dashboard" onAction="#goBack" style="-fx-font-weight: bold; -fx-text-fill: black;" />
+</VBox>

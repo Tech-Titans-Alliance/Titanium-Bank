@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" prefHeight="257.0" prefWidth="317.0" spacing="20" style="-fx-padding: 10px;" styleClass="vbox" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TransferController">
+    <!-- Updated Transfer Funds Text -->
+    <Text style="-fx-font-size: 24px; -fx-fill: rgb(155, 6, 105);" text="Transfer Funds 🔄" />
+    
+    <!-- Styled ComboBox elements -->
+    <ComboBox fx:id="fromAccountDropdown" promptText="From Account" styleClass="combo-box"/>
+    <ComboBox fx:id="toAccountDropdown" promptText="To Account" styleClass="combo-box"/>
+    
+    <TextField fx:id="amountField" promptText="Amount" />
+    <TextField fx:id="pinField" promptText="Pin" />
+    
+    <!-- HBox for centering the buttons with updated styles -->
+    <HBox spacing="20" alignment="CENTER">
+        <Button text="Transfer Money" onAction="#transfer" style="-fx-font-weight: bold; -fx-text-fill: black;" />
+        <Button text="Back To Dashboard" onAction="#goBack" style="-fx-font-weight: bold; -fx-text-fill: black;" />
+    </HBox>
+</VBox>

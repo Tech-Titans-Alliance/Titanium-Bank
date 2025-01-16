@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" 
+            fx:controller="DashboardController" stylesheets="@styles.css" styleClass="vbox">
+    <!-- Top: Hello and Welcome Labels -->
+    <top>
+        <VBox alignment="CENTER" spacing="5">
+            <Label fx:id="helloLabel" alignment="CENTER" style="-fx-font-size: 36px; -fx-padding: 10; -fx-text-fill: rgb(155, 6, 105);" text="Hello 👋" />
+            <Label fx:id="welcomeLabel" alignment="CENTER" style="-fx-font-size: 28px; -fx-padding: 10; -fx-text-fill: darkblue;" text="Welcome to Titanium Bank" />
+        </VBox>
+    </top>
+    
+    <!-- Center: Buttons Layout -->
+    <center>
+        <HBox spacing="50" alignment="CENTER" style="-fx-padding: 20;">
+            <!-- Left Column of Buttons -->
+            <VBox spacing="20" alignment="CENTER">
+                <Button onAction="#createAccount" prefWidth="200" prefHeight="80" styleClass="button">
+                    <graphic>
+                        <VBox alignment="CENTER">
+                            <Label text="📝" style="-fx-font-size: 30px;"/>
+                            <Label text="Create Account" />
+                        </VBox>
+                    </graphic>
+                </Button>
+                <Button onAction="#deposit" prefWidth="200" prefHeight="80" styleClass="button">
+                    <graphic>
+                        <VBox alignment="CENTER">
+                            <Label text="💰" style="-fx-font-size: 30px;"/>
+                            <Label text="Deposit Money"/>
+                        </VBox>
+                    </graphic>
+                </Button>
+                <Button onAction="#withdraw" prefWidth="200" prefHeight="80" styleClass="button">
+                    <graphic>
+                        <VBox alignment="CENTER">
+                            <Label text="💵" style="-fx-font-size: 30px;"/>
+                            <Label text="Withdraw Money"/>
+                        </VBox>
+                    </graphic>
+                </Button>
+            </VBox>
+
+            <!-- Right Column of Buttons -->
+            <VBox spacing="20" alignment="CENTER">
+                <Button onAction="#transfer" prefWidth="200" prefHeight="80" styleClass="button">
+                    <graphic>
+                        <VBox alignment="CENTER">
+                            <Label text="🔄" style="-fx-font-size: 30px;"/>
+                            <Label text="Transfer Money"/>
+                        </VBox>
+                    </graphic>
+                </Button>
+                <Button onAction="#viewAccounts" prefWidth="200" prefHeight="80" styleClass="button">
+                    <graphic>
+                        <VBox alignment="CENTER">
+                            <Label text="📜" style="-fx-font-size: 30px;"/>
+                            <Label text="View Accounts"/>
+                        </VBox>
+                    </graphic>
+                </Button>
+                <Button onAction="#viewTransactions" prefWidth="200" prefHeight="80" styleClass="button">
+                    <graphic>
+                        <VBox alignment="CENTER">
+                            <Label text="📊" style="-fx-font-size: 30px;"/>
+                            <Label text="View Transactions"/>
+                        </VBox>
+                    </graphic>
+                </Button>
+            </VBox>
+        </HBox>
+    </center>
+
+    <!-- Bottom: Footer Label -->
+    <bottom>
+        <Label alignment="CENTER" styleClass="glow-footer" text="© 2025 Tech Titans. All rights reserved." BorderPane.alignment="CENTER" />
+    </bottom>
+</BorderPane>

@@ -1,0 +1,129 @@
+/* Style the VBox with specific dimensions */
+.vbox {
+    -fx-pref-width: 800px; /* Fixed width */
+    -fx-pref-height: 600px; /* Fixed height */
+    -fx-alignment: center; /* Center alignment */
+    -fx-spacing: 15px; /* Spacing between children */
+    -fx-padding: 20px; /* Padding around the VBox */
+    -fx-background-color: white; /* Light background color */
+    -fx-border-color:silver; /* Border around VBox */
+    -fx-border-width: 1px; /* Border width */
+    -fx-border-radius: 5px; /* Rounded corners for the border */
+}
+
+/* Style input fields (TextField and PasswordField) */
+.text-field, .password-field {
+    -fx-pref-width: 200px; /* Adjusted width to make the fields shorter */
+    -fx-border-color: #cccccc; /* Light gray border */
+    -fx-border-width: 1px; /* Border width */
+    -fx-border-radius: 5px; /* Rounded corners */
+    -fx-padding: 5px; /* Padding inside the fields */
+    -fx-font-size: 14px; /* Font size */
+}
+
+/* Style the button */
+/* Common styling for both views */
+
+/* Buttons */
+.button {
+    -fx-background-color: white;
+    -fx-text-fill: rgb(0, 26, 255);
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+    -fx-border-color: rgb(0, 0, 255);
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.button:hover {
+    -fx-background-color: rgb(84, 76, 194);
+    -fx-text-fill: white;
+}
+
+.button:pressed {
+    -fx-background-color: darkblue;
+    -fx-text-fill: silver;
+}
+
+/* Labels */
+.label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-text-fill: black;
+}
+
+/* Image styling (if needed) */
+.image-view {
+    -fx-fit-height: 150;
+    -fx-fit-width: 400;
+}
+/* General Style */
+.root {
+    -fx-font-family: Arial, sans-serif;
+    -fx-background-color: white;
+}
+
+/* Gradient Text for the title */
+.gradient-text {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    /* -fx-text-fill: linear-gradient(to right, blue, purple); */
+}
+
+
+/* Footer Styling */
+.glow-footer {
+    -fx-font-size: 12px;
+    -fx-text-fill: rgb(80, 80, 80);
+}
+
+.glow-footer {
+    -fx-effect: dropshadow(gaussian, rgba(111, 0, 255, 0.253), 5, 0.5, 0, 0);
+}
+
+/* Style for ComboBox */
+.combo-box {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-border-color: darkblue;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px; /* Rounded corners */
+    -fx-prompt-text-fill: white;
+}
+
+/* Style for ComboBox items */
+.combo-box .list-cell {
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+
+/* Style for the ComboBox dropdown's border */
+.combo-box .popup-content {
+    -fx-border-color: darkblue;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px; /* Rounded corners for dropdown */
+}
+
+/* Ensuring equal sizing for ComboBox elements */
+.combo-box {
+    -fx-pref-width: 200px; /* Set width to be the same for both */
+}
+
+/* Styling for Date and Time Text */
+#dateText, #timeText {
+    -fx-font-weight: bold;
+}
+
+/* Styling for Account ID */
+.account-id {
+    -fx-font-weight: bold;
+}
+
+/* Styling for account information */
+.account-info {
+    -fx-font-weight: normal;
+}

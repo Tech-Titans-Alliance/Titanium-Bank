@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" spacing="20" styleClass="vbox" stylesheets="@styles.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="CreateAccountController">
+    <Text style="-fx-font-size: 24px; -fx-fill: rgb(155, 6, 105);" text="Create Account 📝" />
+    
+    <TextField fx:id="holderNameField" promptText="Enter Holder Name" />
+    <TextField fx:id="depositField" promptText="Initial Deposit" />
+    <TextField fx:id="pinField" promptText="Remote Pin" />
+   <AnchorPane prefHeight="86.0" prefWidth="758.0">
+      <children>
+          <Button layoutX="253.0" layoutY="62.0" onAction="#createAccount" text="Create Account" 
+                  style="-fx-font-weight: bold; -fx-text-fill: black;" />
+          <Button layoutX="395.0" layoutY="62.0" onAction="#goBack" text="Back To Dashboard" 
+                  style="-fx-font-weight: bold; -fx-text-fill: black;" />
+      </children>
+   </AnchorPane>
+</VBox>

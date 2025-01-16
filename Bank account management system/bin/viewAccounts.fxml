@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Pos?>
+
+<VBox spacing="20" alignment="CENTER" xmlns:fx="http://javafx.com/fxml" fx:controller="ViewAccountsController" stylesheets="@styles.css" styleClass="vbox">
+    <!-- Accounts Section -->
+    <Text text="Accounts 📜" style="-fx-font-size: 24px; -fx-fill: rgb(155, 6, 105); -fx-font-weight: bold;" />
+    
+    <!-- Bank Name -->
+    <HBox spacing="10" alignment="TOP_LEFT">
+    <Text style="-fx-font-weight: bold; -fx-font-size: 24px;" text="Titanium Bank" />
+    </HBox>
+
+    
+    <!-- Date Section -->
+    <HBox spacing="10" alignment="TOP_LEFT">
+        <Text style="-fx-font-weight: bold;" text="Date: " />
+        <Text fx:id="dateText" />
+    </HBox>
+    
+    <!-- Time Section -->
+    <HBox spacing="10" alignment="TOP_LEFT">
+        <Text style="-fx-font-weight: bold;" text="Time: " />
+        <Text fx:id="timeText" />
+    </HBox>
+
+    <!-- Display Accounts Information -->
+    <VBox fx:id="accountsVBox" spacing="10" alignment="TOP_LEFT">
+        <!-- Account information will be added dynamically here -->
+    </VBox>
+    
+    <!-- Back to Dashboard Button -->
+    <Button fx:id="backButton" text="Back to Dashboard" onAction="#goBack" style="-fx-font-weight: bold; -fx-text-fill: black;" />
+</VBox>
