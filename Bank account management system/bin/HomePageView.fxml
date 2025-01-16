@@ -1,17 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?> 
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?> 
+<?import javafx.scene.control.Label?> 
+<?import javafx.scene.image.Image?> 
+<?import javafx.scene.image.ImageView?> 
+<?import javafx.scene.layout.BorderPane?> 
+<?import javafx.scene.layout.HBox?> 
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane styleClass="vbox" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HomePageController">
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="HomePageController">
     <!-- Header Section -->
     <top>
-        <VBox alignment="CENTER" spacing="10" style="-fx-padding: 10; -fx-background-color: linear-gradient(to right, #4a90e2, #6a5acd); -fx-background-radius: 10; -fx-border-radius: 10;">
+        <VBox fx:id="headerBox" alignment="CENTER" spacing="10" style="-fx-padding: 10; -fx-background-color: linear-gradient(to right, #4a90e2, #6a5acd);">
             <HBox alignment="CENTER" spacing="20">
                 <ImageView fitHeight="50" fitWidth="50" pickOnBounds="true" preserveRatio="true">
                     <image>
@@ -19,8 +19,9 @@
                     </image>
                 </ImageView>
                 <VBox alignment="CENTER" spacing="2">
-                    <Label style="-fx-text-fill: white; -fx-font-size: 24px; -fx-font-weight: bold;" text="Titanium" />
-                    <Label style="-fx-text-fill: white; -fx-font-size: 18px;" text="Bank" />
+                   <Label style="-fx-text-fill: white; -fx-font-size: 24px; -fx-font-weight: bold; -fx-font-family: 'Times New Roman';" text="Titanium" />
+<Label style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold; -fx-font-family: 'Times New Roman';" text="Bank" />
+
                 </VBox>
             </HBox>
             <Label style="-fx-font-size: 10px; -fx-text-fill: white; -fx-font-style: italic;" text="Where Your Money Feels Safe, Like Really Safe🔒 " />
@@ -31,21 +32,33 @@
     <center>
         <VBox alignment="CENTER" spacing="20" style="-fx-padding: 20;">
             <HBox alignment="CENTER_LEFT" spacing="10">
-                <!-- Label with Gradient Background -->
-                <Label text="Bank Your Money Safely"
+                <Label text="Manage your accounts wisely"
                        style="-fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-color: linear-gradient(to right, #4a90e2, #6a5acd); -fx-background-radius: 5; -fx-padding: 5 10;" />
                 <!-- Image Section After Label -->
-                <ImageView fitHeight="200" fitWidth="400" pickOnBounds="true" preserveRatio="true">
+                <ImageView fx:id="bankImage" fitHeight="200" fitWidth="400" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@images/Bank CArd4.png" />
+                        <Image url="@images/Bank.png" />
                     </image>
                 </ImageView>
             </HBox>
 
+            <!-- Animated Icon (Appears and Slides up) -->
+            <ImageView fx:id="animatedIcon" fitHeight="100" fitWidth="100" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 0;">
+                <image>
+                    <Image url="@images/animated-icon.png" />
+                </image>
+            </ImageView>
+
             <!-- Buttons Below Image -->
             <HBox alignment="CENTER" spacing="20" style="-fx-padding: 10;">
-                <Button text="Login" onAction="#navigateToLogin" styleClass="button" style="-fx-text-fill: white;" />
-                <Button text="Register" onAction="#navigateToRegister" styleClass="button" style="-fx-text-fill: white;" />
+                <!-- Login Button -->
+                <Button fx:id="loginButton" text="🔑 Login" onAction="#navigateToLogin" styleClass="button" 
+                        style="-fx-background-color: linear-gradient(to right, #4a90e2, #6a5acd); -fx-text-fill: White; -fx-font-weight: bold; -fx-min-width: 200px; -fx-max-width: 200px; -fx-pref-height: 50px;  -fx-background-radius: 10;
+    -fx-border-radius: 10;-fx-border-color: transparent;  -fx-padding: 10 20;" />
+                <!-- Register Button -->
+                <Button fx:id="registerButton" text="📝 Register" onAction="#navigateToRegister" styleClass="button" 
+                        style="-fx-background-color: linear-gradient(to right, #4a90e2, #6a5acd); -fx-text-fill: White; -fx-font-weight: bold; -fx-min-width: 200px; -fx-max-width: 200px; -fx-pref-height: 50px; -fx-background-radius: 10;
+    -fx-border-radius: 10;-fx-border-color: transparent;  -fx-padding: 10 20;" />
             </HBox>
         </VBox>
     </center>
@@ -54,7 +67,7 @@
     <bottom>
         <HBox alignment="CENTER" style="-fx-padding: 10;">
             <Label text="© 2025 Tech Titans. All rights reserved."
-                   style="-fx-text-fill: gray; -fx-font-size: 12px; -fx-effect: dropshadow(gaussian, blue, 3, 0.2, 0, 0);" />
+                   style="-fx-text-fill: gray; -fx-font-size: 12px;" />
         </HBox>
     </bottom>
 </BorderPane>
