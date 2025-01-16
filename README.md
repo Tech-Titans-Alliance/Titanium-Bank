@@ -1,16 +1,18 @@
 # Titanium Bank 💳🏦
 
 ## Project Overview
-Titanium Bank is a fully functional banking system built using Java and JavaFX. The system allows users to perform various banking activities such as creating an account, depositing and withdrawing money, transferring funds, viewing accounts, and checking transaction history. It also provides features for overdraft management.
+Titanium Bank is a fully functional banking system built using Java and JavaFX. This system enables users to perform a wide range of banking activities such as creating an account, depositing and withdrawing money, transferring funds, viewing accounts, and checking transaction history. It also supports overdraft management, ensuring a comprehensive banking experience.
 
 ## Features 🌟
-- **Register & Login:** Users can create a new account or log in with their existing credentials.
+- **Register & Login:** Users can create a new account or log in using their existing credentials
 - **Create Account:** Users can create a new bank account after registering.
 - **Withdraw Money:** Users can withdraw funds from their account.
 - **Transfer Money:** Users can transfer money between different accounts.
 - **Deposit Funds:** Users can deposit money into their account.
 - **View Accounts:** Users can view all their bank accounts.
-- **View Transaction History:** Users can see the list of transactions in their accounts.
+- **View Transaction History:** Users can view detailed transaction history for each account.
+- **Overdraft Management:** Users can manage their overdraft limits for a flexible banking experience.
+- **Version Control: Git** (for code management and collaboration)
 
 ## Technologies Used 💻
 - **Backend:** Java
@@ -26,7 +28,7 @@ https://www.dropbox.com/scl/fi/6iioyo68w29lbdaihrq35/b7227266-ecf3-45ac-9f22-5c0
 
 ### Prerequisites
 - **Eclipse IDE:** Used for development and running the project.
-- **Java 8 or higher:** Ensure Java is installed on your machine.
+- **Java 8 or higher:** Required to compile and run the code. You can download it from Oracle's website.
 
 ### Running the Project
 1. **Download or Clone the Repository**: Clone or download the project repository to your local machine.
@@ -67,14 +69,15 @@ https://www.dropbox.com/scl/fi/6iioyo68w29lbdaihrq35/b7227266-ecf3-45ac-9f22-5c0
 This project was developed by the **Tech Titans Group**.
 
 ## Languages and Tools Used 🛠️
-- **Java**: Backend development
-- **JavaFX**: Frontend (GUI)
-- **FXML**: UI Layouts
+- **Java**: Core programming language used for backend development.
+- **JavaFX**: Frontend user interface framework (with FXML for UI design).
+- **FXML**:XML-based language used for defining the layout of the UI.
+- **Git:** Version control system used for code management.
 
 ## License 📄
 This project is open-source and available for modification.
 
 ---
 
-Thank you for using **Titanium Bank**! 😊
-
+Thank you for using **Titanium Bank!** 😊
+We hope it brings a seamless banking experience to your fingertips.
