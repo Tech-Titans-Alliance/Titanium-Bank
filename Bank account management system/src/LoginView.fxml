@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<?import javafx.geometry.Insets?> 
+<?import javafx.scene.control.*?> 
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="LoginController" spacing="20" alignment="CENTER" 
+      prefWidth="800" prefHeight="600" stylesheets="@styles.css" styleClass="vbox" style="-fx-background-color: white;">
+
+    <!-- Top content: Login text -->
+    <Label text="➡️Login" style="-fx-font-size: 32px; -fx-font-weight: bold; -fx-text-fill: rgb(155, 6, 105);" styleClass="label" />
+
+    <!-- Centered content: Text Fields and Buttons -->
+    <VBox spacing="20" alignment="CENTER" style="-fx-padding: 40 0;">
+        <TextField fx:id="accountNumberField" promptText="Account Number" prefWidth="250" />
+        <PasswordField fx:id="pinField" promptText="4-digit PIN" prefWidth="250" />
+        
+        <!-- Login and Back Buttons -->
+        <HBox spacing="20" alignment="CENTER">
+            <Button text="Login" onAction="#handleLogin" styleClass="button" />
+            <Button text="Back" onAction="#goBack" styleClass="button" />
+        </HBox>
+    </VBox>
+
+    
+</VBox>
+

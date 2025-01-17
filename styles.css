@@ -1,0 +1,15 @@
+.label {
+    -fx-text-fill: blue;
+}
+
+.text-field {
+    -fx-border-color: gray;
+    -fx-border-radius: 5;
+    -fx-padding: 5;
+}
+
+.button {
+    -fx-background-color: #007BFF;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}

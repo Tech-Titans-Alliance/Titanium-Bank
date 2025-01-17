@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<!-- Registration Page -->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.Region?>
+
+<VBox alignment="CENTER" spacing="10" styleClass="vbox" stylesheets="@styles.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="RegisterController" prefWidth="800" prefHeight="600">
+    
+    <!-- Title Label with custom text color -->
+    <Label style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: rgb(155, 6, 105);" text="💻Register" />
+    
+    <!-- Text Fields for User Input -->
+    <VBox spacing="10" alignment="CENTER" style="-fx-padding: 20;">
+        <TextField fx:id="nameField" promptText="Name" prefWidth="250" />
+        <TextField fx:id="surnameField" promptText="Surname" prefWidth="250" />
+        <TextField fx:id="cellphoneField" promptText="Cellphone" prefWidth="250" />
+        <TextField fx:id="emailField" promptText="Email" prefWidth="250" />
+        <TextField fx:id="accountNumberField" promptText="Account Number" prefWidth="250" />
+        <PasswordField fx:id="pinField" promptText="4-digit PIN" prefWidth="250" />
+    </VBox>
+
+    <!-- AnchorPane for Buttons -->
+    <AnchorPane prefHeight="99.0" prefWidth="758.0">
+        <children>
+            <Button layoutX="379.0" layoutY="56.0" onAction="#goBack" text=" Back " />
+            <Button layoutX="244.0" layoutY="56.0" onAction="#handleRegister" text="Register" />
+        </children>
+    </AnchorPane>
+
+  
+</VBox>
+
