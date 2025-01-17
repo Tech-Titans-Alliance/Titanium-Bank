@@ -56,14 +56,14 @@
                 <!-- Login Button -->
                 <Button fx:id="loginButton" text="🔑 Login" onAction="#navigateToLogin" styleClass="button" 
                         style="-fx-background-color: linear-gradient(to right, #4a90e2, #6a5acd); -fx-text-fill: White; -fx-font-weight: bold; -fx-min-width: 200px; -fx-max-width: 200px; -fx-pref-height: 50px;  -fx-background-radius: 10;
-    -fx-border-radius: 10;-fx-border-color: transparent;  -fx-padding: 10 20;" />
+    	-fx-border-radius: 10;-fx-border-color: transparent;  -fx-padding: 10 20;" />
                 <!-- Register Button -->
                 <Button fx:id="registerButton" text="📝 Register" onAction="#navigateToRegister" styleClass="button" 
                         style="-fx-background-color: linear-gradient(to right, #4a90e2, #6a5acd); -fx-text-fill: White; -fx-font-weight: bold; -fx-min-width: 200px; -fx-max-width: 200px; -fx-pref-height: 50px; -fx-background-radius: 10;
-    -fx-border-radius: 10;-fx-border-color: transparent;  -fx-padding: 10 20;" />
-            </HBox>
-        </VBox>
-    </center>
+	    -fx-border-radius: 10;-fx-border-color: transparent;  -fx-padding: 10 20;" />
+	            </HBox>
+	        </VBox>
+	    </center>
 
     <!-- Footer Section -->
     <bottom>

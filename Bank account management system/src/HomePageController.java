@@ -8,7 +8,6 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
@@ -39,22 +38,28 @@ public class HomePageController {
 
     @FXML
     public void initialize() {
-        // Fade-in animation for header (slow fade)
+        // Apply chatbot.css to the scene
+        chatbotBox.sceneProperty().addListener((observable, oldScene, newScene) -> {
+            if (newScene != null) {
+                newScene.getStylesheets().add(getClass().getResource("chatbot.css").toExternalForm());
+            }
+        });
+
+        // Fade-in animation for header
         FadeTransition fadeHeader = new FadeTransition(Duration.seconds(2), headerBox);
         fadeHeader.setFromValue(0);
         fadeHeader.setToValue(1);
 
-        // Slide-in animation for the bank image (left to right)
+        // Slide-in animation for the bank image
         TranslateTransition slideInImage = new TranslateTransition(Duration.seconds(2), bankImage);
         slideInImage.setFromX(-200); // Start position (off-screen)
         slideInImage.setToX(0); // End position (on-screen)
 
-        // Fade-in animation for the login button
+        // Fade-in animation for the login and register buttons
         FadeTransition fadeLoginButton = new FadeTransition(Duration.seconds(2), loginButton);
         fadeLoginButton.setFromValue(0);
         fadeLoginButton.setToValue(1);
 
-        // Fade-in animation for the register button
         FadeTransition fadeRegisterButton = new FadeTransition(Duration.seconds(2), registerButton);
         fadeRegisterButton.setFromValue(0);
         fadeRegisterButton.setToValue(1);
@@ -133,26 +138,6 @@ public class HomePageController {
             return "Hello there, how can I assist you?";
         } else if (message.contains("transfer money")) {
             return "Navigate to the payments menu, select or add a beneficiary, input the payment details, and confirm the immediate payment.";
-        } else if (message.contains("recurring payments")) {
-            return "Yes, you can arrange recurring payments to be automatically deducted from your account payday each month.";
-        } else if (message.contains("utility bills")) {
-            return "Yes, you can set up utility bill payments.";
-        } else if (message.contains("bill payment history")) {
-            return "Bill payment can be viewed on the transaction history.";
-        } else if (message.contains("apply for loan")) {
-            return "You can visit our nearest branch or call us on 0860112429. You must bring the following: your original SA ID document (must be over 18 years), latest payslip, and a bank statement showing your last 3 salary deposits.";
-        } else if (message.contains("loan interest")) {
-            return "13%.";
-        } else if (message.contains("savings account")) {
-            return "Opening an account is easy. Download the Titanium Bank app, enter your SA ID number, take a few selfies, and provide your personal details.";
-        } else if (message.contains("savings interest")) {
-            return "2.5%.";
-        } else if (message.contains("fraud")) {
-            return "To report fraud for personal banking, call us on 0860112429, or WhatsApp 0614261759.";
-        } else if (message.contains("customer support")) {
-            return "For personal banking, call us on 0860112429, or WhatsApp 0614261759.";
-        } else if (message.contains("exit")) {
-            return "Thank you for using our service. Goodbye!";
         } else {
             return "I'm sorry, I didn't understand that. Could you try rephrasing?";
         }
@@ -163,6 +148,17 @@ public class HomePageController {
         boolean isVisible = chatbotBox.isVisible();
         chatbotBox.setVisible(!isVisible);
         chatbotBox.setManaged(!isVisible);
+
+        // Adjust window size dynamically
+        Stage stage = (Stage) chatbotBox.getScene().getWindow();
+        double originalHeight = 600; // Default stage height
+        double chatbotHeight = 250; // Height adjustment for chatbot
+
+        if (!isVisible) {
+            stage.setHeight(originalHeight + chatbotHeight); // Increase height when chatbot opens
+        } else {
+            stage.setHeight(originalHeight); // Restore original height when chatbot closes
+        }
     }
 
     @FXML
