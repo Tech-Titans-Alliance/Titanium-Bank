@@ -1,15 +1,16 @@
 /* Style the VBox with specific dimensions */
 .vbox {
-    -fx-pref-width: 800px; /* Fixed width */
-    -fx-pref-height: 600px; /* Fixed height */
-    -fx-alignment: center; /* Center alignment */
-    -fx-spacing: 15px; /* Spacing between children */
-    -fx-padding: 20px; /* Padding around the VBox */
-    -fx-background-color: white; /* Light background color */
-    -fx-border-color:silver; /* Border around VBox */
-    -fx-border-width: 1px; /* Border width */
-    -fx-border-radius: 5px; /* Rounded corners for the border */
-}
+
+        -fx-pref-width: 800px; /* Increased width */
+        -fx-pref-height: 900px; /* Increased height */
+        -fx-alignment: center; /* Center alignment */
+        -fx-spacing: 15px; /* Spacing between children */
+        -fx-padding: 20px; /* Padding around the VBox */
+        -fx-background-color: white; /* Light background color */
+        -fx-border-color: silver; /* Border around VBox */
+        -fx-border-width: 1px; /* Border width */
+        -fx-border-radius: 5px; /* Rounded corners for the border */
+    }
 
 /* Style input fields (TextField and PasswordField) */
 .text-field, .password-field {

@@ -81,7 +81,7 @@
 
             <!-- Chatbot Box -->
             <VBox fx:id="chatbotBox" spacing="5" alignment="CENTER" styleClass="chat-popup" visible="false" managed="false" 
-                  style="-fx-border-color: purple; -fx-border-width: 2; -fx-padding: 5; -fx-border-radius: 10px;">
+                  style="-fx-border-color: purple; -fx-border-width: 2; -fx-padding: 5; -fx-border-radius: 10px; -fx-background-color: white; -fx-effect: dropshadow(gaussian, #000000, 15, 0, 0, 0);">
                 <Label text="Titanium Bank AI" style="-fx-font-size: 12px; -fx-font-weight: bold;" />
                 <TextArea fx:id="chatArea" editable="false" prefHeight="120" prefWidth="180" styleClass="chat-area" />
                 <HBox spacing="5">

@@ -8,6 +8,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
@@ -20,7 +21,7 @@ public class HomePageController {
     @FXML
     private VBox headerBox; // Reference to the header VBox that contains the title
     @FXML
-    private ImageView bankImage; // Reference to the image node (corrected from Node to ImageView)
+    private ImageView bankImage; // Reference to the image node
     @FXML
     private Button loginButton; // Reference to the login button
     @FXML
@@ -129,11 +130,32 @@ public class HomePageController {
 
     private String getChatbotResponse(String message) {
         if (message.contains("hello")) {
-            return "Hello there! How can I assist you today?";
-        } else if (message.contains("loan")) {
-            return "For loan inquiries, visit the nearest branch or call 0860112429.";
+            return "Hello there, how can I assist you?";
+        } else if (message.contains("transfer money")) {
+            return "Navigate to the payments menu, select or add a beneficiary, input the payment details, and confirm the immediate payment.";
+        } else if (message.contains("recurring payments")) {
+            return "Yes, you can arrange recurring payments to be automatically deducted from your account payday each month.";
+        } else if (message.contains("utility bills")) {
+            return "Yes, you can set up utility bill payments.";
+        } else if (message.contains("bill payment history")) {
+            return "Bill payment can be viewed on the transaction history.";
+        } else if (message.contains("apply for loan")) {
+            return "You can visit our nearest branch or call us on 0860112429. You must bring the following: your original SA ID document (must be over 18 years), latest payslip, and a bank statement showing your last 3 salary deposits.";
+        } else if (message.contains("loan interest")) {
+            return "13%.";
+        } else if (message.contains("savings account")) {
+            return "Opening an account is easy. Download the Titanium Bank app, enter your SA ID number, take a few selfies, and provide your personal details.";
+        } else if (message.contains("savings interest")) {
+            return "2.5%.";
+        } else if (message.contains("fraud")) {
+            return "To report fraud for personal banking, call us on 0860112429, or WhatsApp 0614261759.";
+        } else if (message.contains("customer support")) {
+            return "For personal banking, call us on 0860112429, or WhatsApp 0614261759.";
+        } else if (message.contains("exit")) {
+            return "Thank you for using our service. Goodbye!";
+        } else {
+            return "I'm sorry, I didn't understand that. Could you try rephrasing?";
         }
-        return "I'm sorry, I didn't understand that. Could you rephrase?";
     }
 
     @FXML
